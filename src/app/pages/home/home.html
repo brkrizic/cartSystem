@@ -1,0 +1,14 @@
+<div class="home-container">
+
+  <!-- Features section -->
+  <section class="features">
+    <h2>Items</h2>
+    <div class="item-card" *ngFor="let item of items()">
+      <div class="item-info">
+        <span class="item-name">{{item.name}}</span>
+      </div>
+      <div class="item-total">Price: ${{item.price}}</div>
+      <button (click)="addItem(item)">Add to Chart</button>
+    </div>
+  </section>
+</div>

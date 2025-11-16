@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <h1 class="logo">SportDash</h1>
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Home</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+      <button (click)="showModal = true">Chart</button>
+    </div>
+  </div>
+</nav>
+
+<main class="main-content">
+  <app-modal
+    [title]="'Chart'"
+    [visible]="showModal"
+    (close)="showModal = false">
+    
+    <app-chart></app-chart>
+  </app-modal>
+  <router-outlet></router-outlet>
+</main>

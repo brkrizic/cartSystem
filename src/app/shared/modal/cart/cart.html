@@ -1,0 +1,20 @@
+<div class="chart-modal-body">
+  <div class="chart-container">
+    <div class="chart-item" *ngFor="let item of chartService.items">
+      <div class="item-info">
+        <span>{{item.name}}</span>
+        <span>{{item.amount}} x {{item.price}}</span>
+      </div>
+      <div class="item-total">{{item.amount * item.price}}</div>
+      <button (click)="chartService.removeItem(item)">Remove</button>
+    </div>
+
+    <p *ngIf="chartService.items.length === 0">Your chart is empty.</p>
+  </div>
+
+  <!-- Footer pinned below scrollable container -->
+  <div class="chart-footer" *ngIf="chartService.items.length > 0">
+    <div class="total">Total: {{ chartService.total() }}</div>
+    <button (click)="chartService.clearChart()">Clear Chart</button>
+  </div>
+</div>

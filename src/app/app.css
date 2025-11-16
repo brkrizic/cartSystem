@@ -1,0 +1,84 @@
+/* ---------------- Navbar ---------------- */
+.navbar {
+  width: 100%;
+  background-color: #1a1a2e;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+/* Inner container for spacing and flex layout */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+}
+
+/* Logo style */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0a500;
+}
+
+/* Links container */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Nav links styling */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: #162447;
+  color: #f0a500;
+}
+
+.nav-link.active {
+  background-color: #f0a500;
+  color: #1a1a2e;
+}
+
+/* Button in navbar styled like nav links */
+.navbar-container button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-container button:hover {
+  background-color: #162447;
+  color: #f0a500;
+}
+
+/* Optional spacing between links and button */
+.navbar-container .nav-links + button {
+  margin-left: 1rem;
+}
+
+/* ---------------- Main Content ---------------- */
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  min-height: calc(100vh - 70px); /* adjust for navbar height */
+}
